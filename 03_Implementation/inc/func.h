@@ -3,6 +3,9 @@
 #include <stdlib.h>
 
 void displayBook(){
+    /*
+    
+   */
  FILE *libraryFile = fopen ("library.bin", "rb");
  if(libraryFile == NULL){
     printf("t\t\t No book is available");
@@ -10,15 +13,21 @@ void displayBook(){
  }
  else 
  {
-        char line[200];
-        while (fgets(line,sizeof(line),libraryFile))
-            printf("\n\t\t\t\t * %s", line);
-        fclose(libraryFile);
-    }
+    char line[200];
+    while (fgets(line,sizeof(line),libraryFile))
+        printf("\n\t\t\t\t * %s", line);
+    fclose(libraryFile);
+ }
     
 }
 
 void returnBook(){
+
+    /*
+    Take Number Of Book at n
+    Take Name of Book  at  Book
+    */
+
     int i;
     int n=1;
     printf(" \n\t\t\t Number of Book  to Return :  ");
@@ -30,16 +39,19 @@ void returnBook(){
     for(i=1;i<=n;i++){
         fgets(Book , sizeof Book , stdin);
         fputs(Book,libraryFile);
-        printf(" Go to Option no 4 ");
+        printf(" Clink on Option No 4 ");
     }
     fputs(Book,libraryFile);
     fclose(libraryFile);
 }
 
 void requestBook(){
+    /*
+    Takes two  Input Number of books and at j
+        And  Book Name  
+    */
     char Required[10];
     int j=1;
-    // displayBook();
     if ( NULL ){
         printf("Library is close.Time 9 Am To 5 Pm * Sunday Close ");
     }
