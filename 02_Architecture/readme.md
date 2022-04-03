@@ -9,3 +9,4 @@
   - Request Book. 
   - Penality on Book.
   - Exit to System.<h5>
+   ![](https://github.com/kalashband/M1_College_Library_management/blob/main/02_Architecture/system_Flow.png)
