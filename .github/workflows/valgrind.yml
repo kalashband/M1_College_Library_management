@@ -13,9 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name : make valgrind
+    - name : apt install dependency
       run: |
-        sudo apt-get -y install valgrind
-        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
+        sudo apt-get -y install valgrind --fix-missing
+        udo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev --fix-missing
+        
     - name: make valgrind
       run: make valgrind -C 03_Implementation
+
